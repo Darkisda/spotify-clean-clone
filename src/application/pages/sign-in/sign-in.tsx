@@ -1,5 +1,4 @@
-import { Button } from "@application/components/common";
-import { SmallTitle } from "@application/components/common/small-title";
+import { Button, SmallTitle } from "@application/components/common";
 import { Header } from "./components";
 
 export function SignIn() {
@@ -66,18 +65,31 @@ export function SignIn() {
             </fieldset>
             <div className="w-full flex mt-4 items-start flex-row justify-between">
               <fieldset className="w-1/2">
-                <input type="checkbox" className="w-4 h-4 checked:accent-green-600" name="remember" id="remeber" />
-                <label htmlFor="remember" className="text-sm font-light ml-4">Lembrar de mim</label>
+                <input
+                  type="checkbox"
+                  className="w-4 h-4 checked:accent-green-600"
+                  name="remember"
+                  id="remeber"
+                />
+                <label htmlFor="remember" className="text-sm font-light ml-4">
+                  Lembrar de mim
+                </label>
               </fieldset>
               <fieldset className="w-1/2 flex items-start justify-end">
-                <Button content="ENTRAR" additionalStyling="w-8/12 bg-green-400" />
+                <Button
+                  content="ENTRAR"
+                  additionalStyling="w-8/12 bg-green-400"
+                />
               </fieldset>
             </div>
           </form>
           <hr className="border-b w-full my-5" />
           <div className="w-full text-center">
             <h2 className="font-medium text-lg mb-3">Não tem uma conta?</h2>
-            <Button content="INSCREVER-SE NO SPOTIFY" additionalStyling="text-gray-500 border-gray-500" />
+            <Button
+              content="INSCREVER-SE NO SPOTIFY"
+              additionalStyling="text-gray-500 border-gray-500"
+            />
           </div>
         </div>
       </div>
