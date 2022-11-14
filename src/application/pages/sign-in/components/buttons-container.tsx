@@ -10,7 +10,7 @@ export function ButtonsContainer() {
         icon={<AiFillFacebook size={24} />}
         type="button"
         content="CONECTAR COM FACEBOOK"
-        additionalStyling="text-white bg-indigo-500"
+        additionalStyling="text-white bg-fb-color"
       />
       <Button
         icon={<FaApple size={24} />}
