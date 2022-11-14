@@ -1,36 +1,37 @@
 import { Button } from "@application/components/common";
-import { useForm } from "../../hooks";
+import { UseFormHandleSubmit, UseFormRegister } from "react-hook-form";
+import { SignInFormValues } from "../../values";
 
-export function LoginForm() {
-  const { emailOrUsername, password, formRef, handleLogin } = useForm();
+type Props = {
+  handleSubmit: UseFormHandleSubmit<SignInFormValues>
+  handleLogin: (args: any) => void;
+  register: UseFormRegister<SignInFormValues>
+}
 
+export function LoginForm({ handleLogin, handleSubmit, register }: Props) {
   return (
-    <div className="w-full">
-      <form ref={formRef} onSubmit={handleLogin}>
+    <div className="mt-4 w-full">
+      <form onSubmit={handleSubmit(handleLogin)}>
         <fieldset className="w-full flex flex-col">
-          <label className="text-xs font-semibold" htmlFor="login">
+          <label className="text-xs font-semibold" htmlFor="emailOrUsername">
             Endereço de e-mail ou nome de usuário
           </label>
           <input
             className="w-full border border-gray-600 rounded my-2 p-4 text-sm font-light text-black outline-4 hover:border-black"
             type="text"
-            name="login"
-            id="login"
-            ref={emailOrUsername}
             placeholder="Endereço de e-mail ou nome de usuário"
+            {...register("emailOrUsername", { required: true })}
           />
         </fieldset>
         <fieldset className="w-full my-2 flex flex-col">
-          <label className="text-xs font-semibold" htmlFor="senha">
+          <label className="text-xs font-semibold" htmlFor="password">
             Senha
           </label>
           <input
             className="w-full border border-gray-600 rounded my-3 p-4 text-sm font-light text-black outline-4 hover:border-black"
             type="password"
-            name="senha"
-            id="senha"
-            ref={password}
             placeholder="Senha"
+            {...register("password", { required: true })}
           />
         </fieldset>
         <fieldset>
