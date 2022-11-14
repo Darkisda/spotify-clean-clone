@@ -1,15 +1,15 @@
 import { Props } from "./props";
 
-export function Button({ content, type, additionalStyling }: Props) {
+export function Button({ icon, content, type, additionalStyling }: Props) {
   return (
     <button
       type={type}
       className={
         additionalStyling +
-        ` w-full border rounded-full py-3 transition-all duration-150 hover:border-black`
+        ` w-full flex items-center content-center justify-center gap-4 border rounded-full py-3 transition-all duration-150 hover:border-black`
       }
     >
-      <h4 className="font-medium tracking-widest">{content}</h4>
+      {icon ? icon : null}  <h4 className="font-medium tracking-widest">{content}</h4>
     </button>
   );
 }
