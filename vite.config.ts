@@ -8,6 +8,7 @@ export default defineConfig({
   resolve: {
     alias: [
       { find: "@application", replacement: path.resolve(__dirname, "src/application") },
+      { find: "@ui", replacement: path.resolve(__dirname, "src/application/ui") },
     ],
   },
 });

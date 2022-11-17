@@ -1,5 +1,5 @@
 import { Button, SmallTitle } from "@application/components/common";
-import { useEffect } from "react";
+import { Wrapper, Container } from "@application/ui/theme";
 import { ButtonsContainer, Header, LoginError, LoginForm } from "./components";
 import { useSignin } from "./hooks";
 
@@ -7,9 +7,9 @@ export function SignIn() {
   const { handleLogin, handleSubmit, register, errors } = useSignin();
 
   return (
-    <div className="w-full h-screen">
+    <Wrapper>
+      <Container size="sm">
       <Header />
-      <div className="container mx-auto max-w-md">
         <div className="mt-10 text-center">
           <SmallTitle>Para continuar, faça login no Spotify Clone</SmallTitle>
         </div>
@@ -38,7 +38,7 @@ export function SignIn() {
             additionalStyling="text-gray-500 border-gray-500 mt-2"
           />
         </div>
-      </div>
-    </div>
+      </Container>
+    </Wrapper>
   );
 }
