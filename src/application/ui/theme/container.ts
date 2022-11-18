@@ -10,6 +10,10 @@ export const Container = styled.div<Props>`
 
   ${props => {
     switch (props.size) {
+      case "xs":
+        return `
+          max-width: ${props.theme.breakPoints.xs}
+        `
       case "sm":
         return `
           max-width: ${props.theme.breakPoints.sm}

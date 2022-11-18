@@ -8,8 +8,8 @@ export function SignIn() {
 
   return (
     <Wrapper>
-      <Container size="sm">
       <Header />
+      <Container size="xs">
         <div className="mt-10 text-center">
           <SmallTitle>Para continuar, faça login no Spotify Clone</SmallTitle>
         </div>

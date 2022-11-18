@@ -4,10 +4,8 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
 
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
-
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 `

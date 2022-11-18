@@ -7,13 +7,14 @@ interface IPalette {
 
 declare module 'styled-components' {
   export type BreakPointsValues = {
+    xs: string
     sm: string
     md: string
     lg: string
     xl: string
   }
 
-  export type BreakPointMapper = | 'sm' | 'md' | 'lg' | 'xl'
+  export type BreakPointMapper = | 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 
   export interface DefaultTheme {
     borderRadius: string
