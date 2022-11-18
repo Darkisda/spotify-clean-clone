@@ -1,5 +1,5 @@
 import { Props } from "./props";
-import { Container } from "./styles"
+import { Container } from "./style"
 
 export function SmallTitle({ children }: Props) {
   return (

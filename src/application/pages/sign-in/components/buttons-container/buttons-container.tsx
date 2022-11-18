@@ -2,7 +2,7 @@ import { Button } from "@application/components/common";
 import { FcGoogle } from 'react-icons/fc'
 import { FaApple } from 'react-icons/fa'
 import { AiFillFacebook } from 'react-icons/ai'
-import { Container } from './styled'
+import { Container } from './style'
 
 export function ButtonsContainer() {
   return (
