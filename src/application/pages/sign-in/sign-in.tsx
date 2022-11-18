@@ -1,6 +1,6 @@
 import { Button, SmallTitle } from "@application/components/common";
 import { Wrapper, Container } from "@application/ui/theme";
-import { ButtonsContainer, Header, LoginError, LoginForm } from "./components";
+import { ButtonsContainer, Header, LoginError, LoginForm, PaddingTop } from "./components";
 import { useSignin } from "./hooks";
 
 export function SignIn() {
@@ -10,9 +10,9 @@ export function SignIn() {
     <Wrapper>
       <Header />
       <Container size="xs">
-        <div className="mt-10 text-center">
+        <PaddingTop>
           <SmallTitle>Para continuar, faça login no Spotify Clone</SmallTitle>
-        </div>
+        </PaddingTop>
         <LoginError hasError={
             errors.emailOrUsername?.type === 'required' || 
             errors.password?.type === 'required'

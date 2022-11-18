@@ -8,3 +8,7 @@
 
   font-smooth: initial;
 }
+
+fieldset, input {
+  border: none;
+}

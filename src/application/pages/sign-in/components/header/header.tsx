@@ -1,5 +1,5 @@
 import { FaSpotify } from 'react-icons/fa'
-import { Container, Content, TextContent } from './styles'
+import { Container, Content, TextContent } from './style'
 
 export function Header() {
   return (
@@ -7,8 +7,8 @@ export function Header() {
       <Content>
         <FaSpotify size={55} />
         <TextContent>
-          <h1 className="text-3xl font-semibold">Spotify</h1>
-          <h3 className="text-xl font-medium leading-3">Clone</h3>
+          <h1>Spotify</h1>
+          <h3>Clone</h3>
         </TextContent>
       </Content>
     </Container>
