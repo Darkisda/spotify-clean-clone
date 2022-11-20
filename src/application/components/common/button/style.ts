@@ -1,12 +1,15 @@
 import styled from "styled-components";
+import { Colors } from '@ui/theme'
 
-interface Props {
-  color?: string
+export type StyledProps = {
+  flat?: boolean
 }
 
-export const SButton = styled.button<Props>`
-  width: 100%;
+export const SButton = styled.button<StyledProps>`
+  width: ${props => props.flat && '100%' };
   height: 3rem;
+  padding-left: ${props => !props.flat && '1.75rem'};
+  padding-right: ${props => !props.flat && '1.75rem'};
 
   display: flex;
   align-items: center;
@@ -14,8 +17,23 @@ export const SButton = styled.button<Props>`
   flex-direction: row;
   gap: 0.5rem;
 
-  border: 1px solid ${props => props.color ? props.color : '#828282'};
   border-radius: 100px;
+
+  backdrop-filter: blur(18px);
+  background-clip: padding-box;
+  
+  border: 2px solid rgba(21,21,21, 0.75);
+  background-color: ${Colors.white};
+
+  transition: all 150ms ease-in-out;
+
+  color: ${Colors.black};
+
+  cursor: pointer;
+
+  &:hover {
+    border-color: black;
+  }
 
   h4 {
     font-size: 0.9rem;

@@ -1,8 +1,8 @@
 import {ReactNode} from "react";
+import { StyledProps } from "./style";
 
 export type Props = {
   content: string;
-  additionalStyling?: string;
   type: "button" | "submit";
   icon?: ReactNode
-};
+} & StyledProps;

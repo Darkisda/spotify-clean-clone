@@ -1,11 +1,12 @@
 import { DefaultTheme } from "styled-components";
+import { Colors } from "./colors";
 
 export const defaultTheme: DefaultTheme = {
   borderRadius: '8px',
   palette: {
     common: {
-      black: '#212121',
-      white: '#ffffff'
+      black: Colors.black,
+      white: Colors.white
     }
   },
   breakPoints: {

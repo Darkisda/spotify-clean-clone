@@ -1,34 +1,35 @@
-import { Button } from "@application/components/common";
+import { AppleButton, Button, FBButton } from "@application/components/common";
 import { FcGoogle } from 'react-icons/fc'
 import { FaApple } from 'react-icons/fa'
 import { AiFillFacebook } from 'react-icons/ai'
 import { Container } from './style'
 
+
 export function ButtonsContainer() {
   return (
     <Container>
-      <Button
+      <FBButton
         icon={<AiFillFacebook size={24} />}
         type="button"
         content="CONECTAR COM FACEBOOK"
-        additionalStyling="text-white bg-fb-color"
+        flat
       />
-      <Button
+      <AppleButton
         icon={<FaApple size={24} />}
         type="button"
         content="CONECTAR COM A APPLE"
-        additionalStyling="text-white bg-black"
+        flat
       />
       <Button
         icon={<FcGoogle size={24} />}
         type="button"
         content="CONECTAR COM O GOOGLE"
-        additionalStyling="text-gray-500 bg-white"
+        flat
       />
       <Button
         type="button"
         content="CONTINUAR COM UM NÚMERO DE TELEFONE"
-        additionalStyling="text-gray-500 bg-white"
+        flat
       />
     </Container>
   );
